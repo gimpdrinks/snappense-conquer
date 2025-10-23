@@ -36,15 +36,10 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="pt-8 border-t border-border text-center">
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Snappense. All rights reserved.
           </p>
-          <div className="flex gap-6 text-sm">
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Privacy</a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Terms</a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Contact</a>
-          </div>
         </div>
       </div>
     </footer>
