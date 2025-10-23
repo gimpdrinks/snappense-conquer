@@ -61,15 +61,17 @@ const FeaturesGrid = () => {
             return (
               <div 
                 key={index}
-                className="group p-8 rounded-2xl border border-border bg-card hover:border-primary/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className="group p-6 rounded-2xl border border-border bg-card hover:border-primary/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 group-hover:scale-110 transition-all">
-                  <Icon className="w-7 h-7 text-primary" />
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 group-hover:scale-110 transition-all flex-shrink-0">
+                    <Icon className="w-7 h-7 text-primary" />
+                  </div>
+                  <h3 className="font-heading text-xl font-semibold text-foreground">
+                    {feature.title}
+                  </h3>
                 </div>
-                <h3 className="font-heading text-xl font-semibold text-foreground mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed mb-6">
+                <p className="text-muted-foreground leading-relaxed mb-4">
                   {feature.description}
                 </p>
                 {/* Feature screenshot - clickable */}
