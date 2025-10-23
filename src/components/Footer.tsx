@@ -1,6 +1,14 @@
+import { useState } from "react";
 import logo from "@/assets/snappense-logo.png";
+import PrivacyPolicyModal from "./PrivacyPolicyModal";
+import TermsOfServiceModal from "./TermsOfServiceModal";
+import ContactModal from "./ContactModal";
 
 const Footer = () => {
+  const [privacyOpen, setPrivacyOpen] = useState(false);
+  const [termsOpen, setTermsOpen] = useState(false);
+  const [contactOpen, setContactOpen] = useState(false);
+
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -29,9 +37,30 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-foreground mb-4">Legal</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Terms of Service</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Contact</a></li>
+              <li>
+                <button 
+                  onClick={() => setPrivacyOpen(true)}
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Privacy Policy
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => setTermsOpen(true)}
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Terms of Service
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => setContactOpen(true)}
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Contact
+                </button>
+              </li>
             </ul>
           </div>
         </div>
@@ -42,6 +71,10 @@ const Footer = () => {
           </p>
         </div>
       </div>
+
+      <PrivacyPolicyModal open={privacyOpen} onOpenChange={setPrivacyOpen} />
+      <TermsOfServiceModal open={termsOpen} onOpenChange={setTermsOpen} />
+      <ContactModal open={contactOpen} onOpenChange={setContactOpen} />
     </footer>
   );
 };
