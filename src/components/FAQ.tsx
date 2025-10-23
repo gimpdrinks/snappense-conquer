@@ -7,28 +7,28 @@ import {
 
 const faqs = [
   {
-    question: "What happens after the $1 trial?",
-    answer: "Your card is charged $12/month (or $99/year if you chose yearly). You can cancel anytime with one click.",
+    question: "What if I don't like it after the trial? Am I locked in?",
+    answer: "Not at all. After your 14-day $1 trial, you can cancel with one click—no phone calls, no hassle. If you continue, you're charged $12/month (or $99/year), but you're never locked in. Cancel anytime and keep your exported reports. This means you can test Snappense risk-free and only pay if it actually saves you time.",
   },
   {
-    question: "How many AI credits do I get?",
-    answer: "15 AI credits per month baseline. The trial includes 50 credits so you can test everything without limits.",
+    question: "What if I run out of AI scans before the month ends?",
+    answer: "You get 15 AI scans per month (receipt scanning, voice entry, or compliance checks). During your trial, you get 50 scans—enough to handle an entire month's expenses and then some. If you ever need more, you can upgrade or manually enter a few receipts the old-fashioned way. This means you'll never be blocked from submitting your report on time, and most users never hit their limit.",
   },
   {
-    question: "Will my report pass my manager's review?",
-    answer: "Our AI flags missing fields and vague descriptions. 95%+ of Snappense reports are approved on first submission.",
+    question: "Will my manager actually approve my reports, or will I still get rejections?",
+    answer: "Rejected reports are frustrating—they mean re-doing work you thought was done. Snappense's AI flags missing receipts, vague descriptions, and policy violations before you submit. 95%+ of Snappense reports are approved on the first try. This means no more back-and-forth emails with accounting, no scrambling to find old receipts, and no delays on your reimbursement.",
   },
   {
-    question: "Do you support PDF, CSV, and Google Sheets?",
-    answer: "Yes. PDF exports include a signature line. CSV downloads instantly. Google Sheets syncs in real-time.",
+    question: "Can I export reports in the format my company requires?",
+    answer: "Every company has different requirements—some need PDFs with signatures, others want CSV for QuickBooks, and some use Google Sheets. Snappense supports all three: PDF exports with signature lines, instant CSV downloads, and real-time Google Sheets sync. This means you'll never have to manually reformat your report or copy-paste data into another system.",
   },
   {
-    question: "Can I log mileage at $0.67/mi?",
-    answer: "Yes. Enter start/end locations and distance. We auto-calculate the total at the IRS standard rate.",
+    question: "Do I still have to calculate mileage manually and look up the IRS rate?",
+    answer: "Manually calculating mileage is tedious—you have to track distances, look up the current IRS rate ($0.67/mi), and multiply everything out. With Snappense, just enter your start and end locations (or let GPS track it), and we auto-calculate the reimbursement at the IRS standard rate. This means you'll never underclaim mileage or waste time with a calculator again.",
   },
   {
-    question: "Can you build my first report for me?",
-    answer: "Absolutely. Our Done-For-You service is included in your trial. Just email us your receipts and we'll handle it.",
+    question: "I have a backlog of expenses—will I have to spend hours catching up?",
+    answer: "Starting a new expense system when you already have a pile of receipts feels overwhelming. That's why our Done-For-You service is included in your trial—just email us your receipts (photos, PDFs, whatever you have), and we'll build your first report for you. This means you can start fresh without spending your weekend sorting through shoeboxes.",
   },
 ];
 
@@ -38,10 +38,10 @@ const FAQ = () => {
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Frequently Asked Questions
+            Common Concerns About Switching
           </h2>
           <p className="text-xl text-muted-foreground">
-            Everything you need to know before you start.
+            We've helped thousands escape expense report chaos. Here's what they asked first.
           </p>
         </div>
 
