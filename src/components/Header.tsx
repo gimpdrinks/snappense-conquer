@@ -24,6 +24,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <img src={logo} alt="Snappense - AI-powered expense tracking" className="h-8 md:h-10" />
+            <span className="font-heading font-bold text-xl md:text-2xl text-foreground">Snappense</span>
           </div>
 
           {/* Navigation - hidden on mobile, shown on md+ */}
