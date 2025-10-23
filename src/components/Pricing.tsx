@@ -8,7 +8,7 @@ const Pricing = () => {
   const [showCheckout, setShowCheckout] = useState(false);
 
   const benefits = [
-    "50 AI credits included in trial",
+    "50 AI scans during trial (3x monthly limit)",
     "Receipt scanning with AI extraction",
     "Voice-to-expense entry",
     "Mileage tracking at $0.67/mi",

@@ -51,7 +51,7 @@ const NewHero = () => {
                     document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
                   }}
                 >
-                  Start $1 Trial — 50 AI Credits
+                  Start $1 Trial — 50 AI Scans
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
                 <Button 

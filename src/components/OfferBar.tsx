@@ -7,8 +7,8 @@ const OfferBar = () => {
         <div className="flex items-center justify-center gap-2 text-sm md:text-base font-medium text-center flex-wrap">
           <Sparkles className="w-4 h-4 flex-shrink-0" />
           <span className="font-bold">Founding 20:</span>
-          <span className="hidden sm:inline">$1 trial • 50 AI credits • Done-For-You first report • $12/mo or $99/yr lock-in</span>
-          <span className="sm:hidden">$1 trial • 50 AI credits • Price lock</span>
+          <span className="hidden sm:inline">$1 trial • 50 AI scans (3x standard) • Done-For-You first report • $12/mo or $99/yr lock-in</span>
+          <span className="sm:hidden">$1 trial • 50 AI scans • Price lock</span>
         </div>
       </div>
     </div>
