@@ -10,31 +10,31 @@ import ScreenshotModal from "./ScreenshotModal";
 const features = [
   {
     icon: Camera,
-    title: "Scan a Receipt (AI)",
+    title: "No More Manual Data Entry",
     description: "Upload a photo. We extract name, amount, date, category, purpose.",
     image: receiptScanImg,
   },
   {
     icon: Mic,
-    title: "Use Your Voice (AI)",
+    title: "Log Expenses On The Go",
     description: "Say: 'Parking $5 today, travel.' We do the rest.",
     image: voiceEntryImg,
   },
   {
     icon: Map,
-    title: "Mileage Log",
+    title: "Capture Every Deductible Mile",
     description: "Enter start/end, distance. We auto-calculate at $0.67/mi.",
     image: mileageImg,
   },
   {
     icon: Shield,
-    title: "AI Compliance Analyst",
+    title: "Avoid Audit Headaches",
     description: "We flag missing 'Purpose' or 'Client' and vague descriptions.",
     image: complianceImg,
   },
   {
     icon: FileDown,
-    title: "Exports + Sync",
+    title: "Share Reports in Seconds",
     description: "PDF (with signature line), CSV, and Google Sheets sync.",
     image: exportsImg,
   },
