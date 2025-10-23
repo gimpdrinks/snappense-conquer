@@ -1,9 +1,11 @@
-import { Camera, Mic, Map, Shield, FileDown } from "lucide-react";
+import { Camera, Mic, Map, Shield, FileDown, Maximize2 } from "lucide-react";
+import { useState } from "react";
 import receiptScanImg from "@/assets/feature-receipt-scan.png";
 import voiceEntryImg from "@/assets/feature-voice-entry.png";
 import mileageImg from "@/assets/feature-mileage.png";
 import complianceImg from "@/assets/feature-compliance.png";
 import exportsImg from "@/assets/feature-exports.png";
+import ScreenshotModal from "./ScreenshotModal";
 
 const features = [
   {
@@ -39,6 +41,8 @@ const features = [
 ];
 
 const FeaturesGrid = () => {
+  const [selectedImage, setSelectedImage] = useState<{ image: string; title: string } | null>(null);
+
   return (
     <section id="features" className="py-20 md:py-28 bg-background scroll-mt-20">
       <div className="container mx-auto px-4 max-w-7xl">
@@ -68,19 +72,47 @@ const FeaturesGrid = () => {
                 <p className="text-muted-foreground leading-relaxed mb-6">
                   {feature.description}
                 </p>
-                {/* Feature screenshot */}
-                <div className="rounded-xl overflow-hidden border border-border shadow-sm bg-secondary/20">
+                {/* Feature screenshot - clickable */}
+                <div 
+                  className="relative rounded-xl overflow-hidden border border-border shadow-sm bg-secondary/20 cursor-pointer group/image hover:border-primary/50 transition-all"
+                  onClick={() => setSelectedImage({ image: feature.image, title: feature.title })}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      setSelectedImage({ image: feature.image, title: feature.title });
+                    }
+                  }}
+                  aria-label={`View larger version of ${feature.title} screenshot`}
+                >
                   <img 
                     src={feature.image} 
                     alt={`${feature.title} interface screenshot`}
-                    className="w-full h-auto"
+                    className="w-full h-auto transition-transform group-hover/image:scale-105"
                   />
+                  {/* Expand icon overlay */}
+                  <div className="absolute inset-0 bg-black/0 group-hover/image:bg-black/40 transition-all flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-full bg-primary/0 group-hover/image:bg-primary flex items-center justify-center opacity-0 group-hover/image:opacity-100 transition-all transform scale-75 group-hover/image:scale-100">
+                      <Maximize2 className="w-6 h-6 text-primary-foreground" />
+                    </div>
+                  </div>
                 </div>
               </div>
             );
           })}
         </div>
       </div>
+
+      {/* Screenshot Modal */}
+      {selectedImage && (
+        <ScreenshotModal
+          isOpen={!!selectedImage}
+          onClose={() => setSelectedImage(null)}
+          image={selectedImage.image}
+          title={selectedImage.title}
+        />
+      )}
     </section>
   );
 };
