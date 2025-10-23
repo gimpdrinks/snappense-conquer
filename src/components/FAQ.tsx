@@ -28,7 +28,7 @@ const faqs = [
   },
   {
     question: "I have a backlog of expenses—will I have to spend hours catching up?",
-    answer: "Starting a new expense system when you already have a pile of receipts feels overwhelming. That's why our Done-For-You service is included in your trial—just email us your receipts (photos, PDFs, whatever you have), and we'll build your first report for you. This means you can start fresh without spending your weekend sorting through shoeboxes.",
+    answer: "Starting a new expense system with a pile of untracked expenses feels overwhelming—you're worried about spending your entire weekend playing catch-up. Here's the good news: with 50 AI scans in your trial, you can power through that backlog fast. Just snap photos of old receipts or use voice entry to log past expenses in seconds each. What used to take hours now takes minutes. This means you can catch up during a lunch break instead of sacrificing your weekend—and from then on, you'll never fall behind again.",
   },
 ];
 
