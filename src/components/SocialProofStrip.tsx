@@ -1,4 +1,4 @@
-import { Star, Clock } from "lucide-react";
+import { Star, Clock, Users } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const testimonials = [
@@ -37,6 +37,16 @@ const SocialProofStrip = () => {
   return (
     <section className="py-12 bg-secondary/30 border-y border-border">
       <div className="container mx-auto px-4 max-w-5xl">
+        {/* Section Header */}
+        <div className="text-center mb-10 md:mb-12">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-3">
+            Don't Take Our Word For It
+          </h2>
+          <p className="text-muted-foreground text-lg">
+            See why professionals love Snappense
+          </p>
+        </div>
+
         <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* Rotating Testimonial */}
           <div className="bg-card rounded-2xl p-8 border border-border shadow-sm">
@@ -66,8 +76,9 @@ const SocialProofStrip = () => {
             </div>
           </div>
 
-          {/* Micro-metric */}
-          <div className="text-center md:text-left">
+          {/* Metrics Stack */}
+          <div className="flex flex-col gap-4">
+            {/* Time metric */}
             <div className="inline-flex items-center gap-3 bg-card border border-border rounded-xl shadow-sm p-6">
               <div className="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center">
                 <Clock className="w-7 h-7 text-accent" />
@@ -75,6 +86,18 @@ const SocialProofStrip = () => {
               <div>
                 <p className="text-sm text-muted-foreground mb-1">Average time to first report</p>
                 <p className="text-3xl font-bold text-primary">{"<4 minutes"}</p>
+              </div>
+            </div>
+
+            {/* Usage stat */}
+            <div className="inline-flex items-center gap-3 bg-card border border-border rounded-xl shadow-sm p-6">
+              <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
+                <Users className="w-7 h-7 text-primary" />
+              </div>
+              <div>
+                <p className="text-sm text-muted-foreground mb-1">This month</p>
+                <p className="text-3xl font-bold text-primary">1,000+</p>
+                <p className="text-xs text-muted-foreground">Reports generated</p>
               </div>
             </div>
           </div>
